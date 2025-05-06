@@ -1,0 +1,117 @@
+/*contenedor principal del navegador*/
+nav{
+    align-self: start;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(49, 53, 52, 0.8);
+    padding: 1rem 5rem;
+    position: fixed;
+    z-index: 999;
+}
+
+/*logo*/
+figure img{
+    width: 70px;
+    height: auto;
+}
+
+/*caja principal dentro del contenedor*/
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+/*links*/
+main a{
+    text-decoration: none;
+    font-family: var(--text);
+    font-size: 1rem;
+    font-weight: 550;
+    color: var(--light);
+    transition: all ease-in-out 0.3s;
+}
+
+main a:hover{
+    transition: all ease-in-out 0.3s;
+    color: var(--sky);
+}
+
+/*ocultar boton para diseño adaptable*/
+.burguer{
+    display: none;
+}
+
+/*diseño adaptable*/
+@media(max-width: 1440px){
+
+    nav{
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media(max-width: 1025px){
+
+    nav{
+        position: fixed;
+        top: 0;
+        height: 100px;
+        min-width: 100%;
+        z-index: 999;
+        padding: 0.5rem 1rem;
+    }
+
+    figure img{
+        width: 70px;
+        height: auto;
+    }
+
+    /*mostrar botón menu*/
+    .burguer{
+        display: flex;
+    }
+
+    /*se oculta el menu y se activa con la clase .open ligada a la función onClick*/
+    .menu{
+        position: fixed;
+        transform: translateX(-100%); 
+        transition: transform 0.3s initial;
+        top: 0;
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /*menu abierto*/
+    .menu.open {
+        background: rgb(49, 53, 52, 0.8);
+        z-index: 1000;
+        transform: translateX(0);
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        left: 0;
+        top: 100px;
+    }
+      
+    .menu a{
+        color: var(--light);
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+    }
+
+    .menu a:hover{
+        color: var(--sky);
+    }
+    
+}

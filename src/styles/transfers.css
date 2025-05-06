@@ -1,0 +1,110 @@
+/*contenedor principal del componente*/
+.transfers{
+    background: var(--black);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/*secciones dentro del contenedor principal*/
+.transfers aside,
+.transfers section{
+    width: 50%;
+    padding: 0 1rem;
+}
+
+/*tarjeta dentro del contenedor*/
+.transfers .content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 750px;
+    background: rgb(123, 128, 126, 0.5);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+}
+
+/*titulo*/
+.transfers .content h2{
+    font-family: var(--title);
+    font-size: clamp(2rem, -0.2905rem + 3.5754vw, 4rem);
+    font-weight: 600;
+    color: var(--light);
+}
+
+/*contenedor de textos*/
+.transfers .content .texts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    font-family: var(--text);
+    font-size: clamp(1.2rem, 0.9709rem + 0.3575vw, 1.4rem);
+    font-weight: 400;
+    color: var(--light);
+}
+
+.texts span{
+    font-style: italic;
+    color: var(--sky);
+    font-weight: 550;
+}
+
+
+/*diseño adaptable*/
+@media(max-width: 1440px){
+    
+    .transfers{
+        gap: 1rem;
+    }
+
+    .transfers .content{
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media(max-width: 1025px){
+
+    .transfers{
+        min-height: fit-content;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0;
+        gap: 0.5rem;
+    }
+
+    .transfers aside,
+    .transfers section{
+        width: 100%;
+    }
+    
+    .transfers .content h2{
+        font-size: clamp(2rem, 1.4109rem + 2.4806vw, 3rem);
+    }
+
+    .transfers .content{
+        justify-self: center;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .transfers{
+        min-height: 100svh;
+        padding-top: 120px;
+    }
+
+    .transfers .content{
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+}

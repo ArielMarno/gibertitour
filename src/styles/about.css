@@ -1,0 +1,214 @@
+/*contenedor principal del componente*/
+.about{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 3rem;
+}
+
+/*caja principal dentro del componente*/
+.about main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/*contenedor con titulo, subtitulo y texto*/
+.about section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.about section h2{
+    font-family: var(--title);
+    font-size: clamp(2rem, -0.2905rem + 3.5754vw, 4rem);
+    font-weight: 600;
+    color: var(--black);
+}
+
+.about h4{
+    font-family: var(--text);
+    font-size: clamp(1.1rem, 0.9667rem + 0.2778vw, 1.3rem);
+    font-weight: 600;
+    max-width: 600px;
+    color: var(--black);
+}
+
+.about h4 span{
+    font-style: italic;
+}
+
+/*linea con degradado*/
+.about-line{
+    height: 3px;
+    width: 100%;
+    background: var(--gradient2);
+    margin: 0.2rem 0;
+}
+
+/*carusel para dispositivos mobiles*/
+.about .carousel-rsp{
+    display: none;
+}
+
+/*contenedor de texto*/
+.about-text{
+    font-family: var(--text);
+    font-size: clamp(1.1rem, 0.8709rem + 0.3575vw, 1.3rem);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 600px;
+}
+
+/*contenedor de tildes*/
+.about-checks{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.about-checks-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/*tildes*/
+.about-checks-item img{
+    width: 20px;
+    height: auto;
+}
+
+/*textos*/
+.about-checks-item p{
+    font-family: var(--text);
+    font-style: italic;
+    font-size: clamp(1rem, 0.6564rem + 0.5363vw, 1.3rem);
+    font-weight: 550;
+    color: var(--black);
+}
+
+/*contendor de carusel(imagenes)*/
+.about aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*carusel*/
+.about .carousel{
+    width: 500px;
+    height: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.about .carousel div{
+    width: 100%;
+    height: 100%;
+}
+
+.about .carousel div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*ocultar btn interactivos de react-responsive-carousel*/
+.carousel-status{
+    display: none;
+}
+
+.control-dots{
+    display: none;
+}
+
+.about .carousel .thumb{
+    display: none;
+}
+
+.about .carousel.carousel-slider .control-arrow{
+    display: none;
+}
+
+
+/*diseño adaptable*/
+@media(max-width: 1440px){
+
+    .about{
+        padding: 3rem 1.5rem;
+    }
+
+    .about .carousel{
+        width: 450px;
+        height: 650px;
+    }
+}
+
+@media(max-width: 1025px){
+
+    .about{
+        padding: 3rem 1rem;
+        padding-top: 5rem;
+    }
+
+    .about aside{
+        display: none;
+    }
+
+    .about section h2{
+        font-size: clamp(2rem, 1.4109rem + 2.4806vw, 3rem);
+        font-weight: 700;
+    }
+
+    .about .carousel{
+        width: 100%;
+        height: 600px;
+    }
+
+    .about .carousel-rsp{
+        margin: 1rem 0;
+        display: flex;
+    }
+
+    .about .carousel-rsp .carousel{
+        max-width: 600px;
+        height: 600px;
+    }
+
+    .carousel-rsp .carousel div{
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+    }
+
+    .carousel-rsp .carousel div img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media(max-width: 768px){
+    
+    .about{
+        min-height: 100vh;
+        padding-top: 120px;
+    }
+}

@@ -1,0 +1,29 @@
+:root {
+
+  /*variables de fuentes*/
+    --title: "Gemunu Libre", sans-serif;
+    --text: "Montserrat", sans-serif;
+  /*variables de colores*/
+    --sky: #0eb5d3;
+    --green: #47D447;
+    --black: #313534;
+    --light: #EDF9FB;
+    --grey: #D0DEE0;
+    --gradient: linear-gradient(0deg, rgba(71, 212, 71, 1) 0%, rgba(14, 181, 211, 1) 100%);
+    --gradient2: linear-gradient(331deg, rgba(71, 212, 71, 1) 0%, rgba(14, 181, 211, 1) 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*imagen de fondo fijada*/
+body{
+  background-image: url("/bg.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

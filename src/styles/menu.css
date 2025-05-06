@@ -1,0 +1,60 @@
+/*posición, tamaño y orientación del botón*/
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+  }
+
+  /*barras*/
+  .toggle .bars {
+    width: 100%;
+    height: 4px;
+    background-color: var(--sky);
+    border-radius: 4px;
+  }
+  
+  /*barra 1 y 3*/
+  .toggle #bar1, .toggle #bar3{
+    width: 100%;
+  }
+
+  /*barra2*/
+  .toggle.open #bar2{
+    transition-duration: .8s;
+  }
+  
+  /*transicion*/
+ .toggle.open .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
+  
+  .toggle.open #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
+  
+  .toggle.open #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+  
+  .toggle.open #bar3  {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+  
+  /*rotación al activar la clase .open*/
+  .toggle.open {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }

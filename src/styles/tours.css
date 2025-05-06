@@ -1,0 +1,337 @@
+/*contenedor principal del componente*/
+.tours{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3rem 0rem;
+    padding-top: 6rem;
+}
+
+/*contenedor de tituli, linea y subtitulo*/
+.tours-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*linea degradado*/
+.main-title .line{
+    width: 100%;
+    height: 3px;
+    background: var(--gradient);
+}
+
+.main-title h2{
+    font-family: var(--title);
+    font-size: clamp(2rem, -0.2905rem + 3.5754vw, 4rem);
+    font-weight: 600;
+    color: var(--black);
+    padding: 0 2rem;
+}
+
+.tours-title p{
+    text-align: center;
+    font-family: var(--text);
+    font-size: clamp(1.2rem, 1.1176rem + 0.4706vw, 1.7rem);
+    font-weight: 450;
+    color: var(--black);
+    max-width: 800px;
+}
+
+/*contenedor de slider*/
+.tours .slider{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    touch-action: none;
+    touch-action: pan-y;
+}
+
+/*contenedor de excursiones*/
+.tours .card-container{
+    width: 1390px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scrollbar-width: none;
+    user-select: none;
+    overflow-y: auto;
+    touch-action: pan-y;
+    gap: 20px;
+}
+
+/*tarjetas excursiones*/
+.tours .card-container .tour{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    width: 450px;
+    height: 650px;
+    padding: 0.7rem;
+    border-radius: 15px;
+}
+
+.tour .img-container{
+    width: 100%;
+    min-height: 370px;
+    max-height: 370px;
+}
+
+.tour .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7.5px ;
+}
+
+.tour section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+/*titulo*/
+.tour h3{
+    font-family: var(--title);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--sky);    
+}
+
+/*linea degradado*/
+.tour .line{
+    width: 100%;
+    height: 3px;
+    background: var(--gradient2);
+}
+
+.tour .description{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.tour .route{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/*icono*/
+.tour .description img{
+    width: 35px;
+    height: auto;
+}
+
+/*Visitando*/
+.tour .route h5{
+    font-family: var(--text);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+/*recorrido*/
+.tour .description p{
+    font-family: var(--text);
+    font-size: 1rem;
+    font-weight: 550;
+    height: 75px;
+}
+
+/*botón*/
+.tour-cta{
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-cta a{
+    margin-top: 1rem;
+    align-self: center;
+    font-family: var(--title);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--gradient2);
+    color: var(--light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/*contenedor de flechas*/
+.arrow-container{
+    position: absolute;
+    width: 1500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*flechas*/
+.arrow-container img{
+    width: 64px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+/*diseño adaptable*/
+@media (max-width: 1540px){
+    
+    .tours .card-container{
+        width: 1150px;
+        gap: 20px;
+    }
+    
+    .tours .card-container .tour{
+        gap: 0.5rem;
+        width: 370px;
+        height: 560px;
+        padding: 0.7rem;
+        border-radius: 15px;
+    }
+    
+    .tour .img-container{
+        width: 100%;
+        min-height: 300px;
+        max-height: 300px;
+    }
+    
+    .tour h3{
+        font-size: 2rem;   
+    }
+    
+    
+    .tour .description img{
+        width: 30px;
+        height: auto;
+    }
+
+    .tour .description p{
+        font-size: 1rem;
+        font-weight: 600;
+        height: 90px;
+    }
+    
+    .tour .route h5{
+        font-size: 1.1rem;
+    }
+    
+    .tour-cta a{
+        font-size: 1.3rem;
+    }
+    
+    .arrow-container{
+        width: 1240px;
+    }
+    
+    .arrow-container img{
+        width: 54px;
+        height: auto;
+    }
+    
+}
+
+@media (max-width: 1260px){
+    
+    .tours .card-container{
+        width: 755px;
+        gap: 15px;
+    }
+
+    .arrow-container{
+        width: 850px;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .tours-title h2{
+        font-size: clamp(2rem, 1.4109rem + 2.4806vw, 3rem);
+        font-weight: 700;
+        padding: 0 1rem;
+    }
+
+    .tours-title p{
+        max-width: 550px;
+        padding: 0 1rem;
+    }
+
+    .tours .card-container{
+        width: 380px;
+        gap: 0px;
+    }
+
+    .tours .card-container .tour{
+        gap: 0.5rem;
+        width: 380px;
+        padding: 0.7rem;
+        border-radius: 0;
+    }
+
+    .arrow-container{
+        width: 380px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: static;
+    }
+
+    .arrow-container img{
+        width: 60px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px){
+
+    .tours{
+        min-height: 100svh;
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .tours-title p{
+        max-width: 380px;
+    }
+
+    .tours .card-container{
+        width: 350px;
+    }
+
+    .tours .card-container .tour{
+        gap: 0.5rem;
+        width: 350px;
+        padding: 0.7rem;
+    }
+
+    .arrow-container{
+        width: 345px;
+    }
+}

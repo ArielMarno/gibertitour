@@ -1,0 +1,185 @@
+/*contenedor principal del componente*/
+.corporate{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+}
+
+/*contenedor del titulo, subtitulo y textos*/
+.corp-content{
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.corp-title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: var(--black);
+}
+
+/*titulo*/
+.corp-title h2{
+    font-family: var(--title);
+    font-size: clamp(2rem, -0.2905rem + 3.5754vw, 4rem);
+    font-weight: 600;
+}
+
+/*subtitulo*/
+.corp-title h3{
+    font-family: var(--text);
+    font-size: clamp(1.1rem, 0.9667rem + 0.2778vw, 1.3rem);
+    font-weight: 550;
+    max-width: 600px;
+}
+
+.corp-title h3 span{
+    font-style: italic;
+    font-weight: 600;
+}
+
+/*linea degradado*/
+.corp-line{
+    height: 3px;
+    width: 100%;
+    max-width: 550px;
+    background: var(--gradient2);
+}
+
+.corp-title h5{
+    font-family: var(--text);
+    font-size: clamp(1rem, 0.8667rem + 0.2778vw, 1.2rem);
+    font-weight: 500;
+    max-width: 600px;
+}
+
+/*contenedor de tildes*/
+.corp-items{
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.corp-items div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/*tildes*/
+.corp-items img{
+    width: 23px;
+    height: auto;
+}
+
+/*texto*/
+.corp-items p{
+    font-family: var(--text);
+    font-size: clamp(1rem, 0.8667rem + 0.2778vw, 1.2rem);
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+/*parrafos*/
+.corp-content p{
+    font-family: var(--text);
+    font-size: clamp(1rem, 0.8667rem + 0.2778vw, 1.2rem);
+    font-weight: 500;
+    color: var(--black);
+    max-width: 530px;
+}
+
+/*contenedor de imagen*/
+.corporate aside{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.corporate .img-container{
+    max-width: 600px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.corporate .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/*diseño adaptable*/
+@media (max-width: 1440px){
+    
+    .corporate .img-container{
+        max-width: 450px;
+        max-height: 550px;
+    }
+
+    .corp-title h3,
+    .corp-line,
+    .corp-title h5,
+    .corp-content p{
+        max-width: 100%;
+    }
+
+    .corp-items img{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .corporate{
+        min-height: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+
+    .corp-title h3,
+    .corp-line,
+    .corp-title h5,
+    .corp-content p{
+        max-width: 600px;
+    }
+
+    .corp-title h2{
+        font-size: clamp(2rem, 1.4109rem + 2.4806vw, 3rem);
+        font-weight: 700;
+    }
+    .corporate .img-container{
+        max-width: 600px;
+        max-height: auto;
+    }
+
+    .corp-items img{
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media (max-width: 768px){
+    
+    .corporate{
+        min-height: 100svh;
+        padding-top: 120px;
+    }
+}
