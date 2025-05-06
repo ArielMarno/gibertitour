@@ -4,7 +4,7 @@ import TransfersAnimation from './TransfersAnimation';
 
 const Transfers = () => {
   return (
-    <div className='transfers' id='translados'>
+    <div className='transfers' id='traslados'>
       <aside>
         <TransfersAnimation />
       </aside>

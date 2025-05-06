@@ -104,7 +104,7 @@ const Contact = () => {
           <h3 data-aos="fade-up">Giberti Turismo</h3>
           <a href="#quienessomos" data-aos="fade-up">Quienes Somos</a>
           <a href="#excursiones" data-aos="fade-up">Excursiones</a>
-          <a href="#translados" data-aos="fade-up">Traslados Privados</a>
+          <a href="#traslados" data-aos="fade-up">Traslados Privados</a>
           <a href="#eventos" data-aos="fade-up">Eventos Corporativos</a>
         </div>
       </main>

@@ -24,7 +24,7 @@ const Nav = () => {
         <main className={`menu ${isOpen ? 'open' : ''}`}>
           <a href="#quienessomos" onClick={handleLinkClick}>Quienes Somos</a>
           <a href="#excursiones" onClick={handleLinkClick}>Excursiones</a>
-          <a href="#translados" onClick={handleLinkClick}>Traslados Privados</a>
+          <a href="#traslados" onClick={handleLinkClick}>Traslados Privados</a>
           <a href="#eventoscorporativos" onClick={handleLinkClick}>Eventos Corporativos</a>
           <a href="#contacto" onClick={handleLinkClick}>Contacto</a>
         </main>
