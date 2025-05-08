@@ -34,7 +34,7 @@ const Contact = () => {
             <h2 data-aos="fade-up">¡Contactanos!</h2>
             <p data-aos="fade-up">Dejanos tu consulta y te responderemos a la brevedad.</p>
           </div>
-          <form data-aos="fade-up" action="">
+          <form data-aos="fade-up" action="https://formspree.io/f/movddnrb" method="POST">
             <input type="text"
                   id="nombre"
                   name='nombre'
